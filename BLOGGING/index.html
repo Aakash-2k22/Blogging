@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="InkSpace - A modern, minimalist editorial blogging platform celebrating deep ideas, design craftsmanship, and thoughtful essays." />
+  <title>InkSpace — Ideas Worth Reading</title>
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/editor.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <!-- Favicon SVG -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✒️</text></svg>" />
+</head>
+<body>
+
+  <!-- Sticky Site Header -->
+  <header class="site-header" id="site-header">
+    <div class="container navbar-container">
+      <!-- Brand Logo -->
+      <a href="#/" class="brand-logo" aria-label="InkSpace Home">
+        <span class="logo-symbol">I</span>
+        <span class="logo-text">InkSpace</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="#/" class="nav-link active">Home</a>
+        <a href="#/explore" class="nav-link">Explore</a>
+        <a href="#/categories" class="nav-link">Categories</a>
+        <a href="#/saved" class="nav-link">Saved</a>
+        <a href="#/dashboard" class="nav-link">Dashboard</a>
+        <a href="#/about" class="nav-link">About</a>
+      </nav>
+
+      <!-- Action Buttons (Right) -->
+      <div class="header-actions">
+        <!-- Search Quick Link -->
+        <a href="#/explore" class="btn-icon" title="Search articles" aria-label="Search articles">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </a>
+
+        <!-- Theme Toggle -->
+        <button type="button" id="theme-toggle-btn" class="btn-icon" title="Switch theme" aria-label="Toggle dark mode">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Write Story CTA -->
+        <a href="#/create" class="btn btn-primary btn-sm btn-write-nav">
+          <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
+          </svg>
+          Write a Story
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" id="hamburger-btn" class="hamburger-btn" aria-label="Open navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop & Menu -->
+  <div id="mobile-backdrop" class="mobile-backdrop" aria-hidden="true"></div>
+  <aside id="mobile-drawer" class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-drawer-header">
+      <a href="#/" class="brand-logo">
+        <span class="logo-symbol">I</span>
+        <span class="logo-text">InkSpace</span>
+      </a>
+      <button type="button" id="mobile-close-btn" class="btn-icon" aria-label="Close navigation menu">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="mobile-nav-links">
+      <a href="#/" class="mobile-nav-link">Home</a>
+      <a href="#/explore" class="mobile-nav-link">Explore Archive</a>
+      <a href="#/categories" class="mobile-nav-link">Categories</a>
+      <a href="#/saved" class="mobile-nav-link">Saved Stories</a>
+      <a href="#/dashboard" class="mobile-nav-link">Dashboard</a>
+      <a href="#/about" class="mobile-nav-link">About InkSpace</a>
+    </nav>
+
+    <div class="mobile-drawer-footer">
+      <a href="#/create" class="btn btn-primary" style="width: 100%;">
+        Write a Story
+      </a>
+    </div>
+  </aside>
+
+  <!-- Dynamic Application Main Container -->
+  <main id="app-main" role="main" tabindex="-1">
+    <!-- Populated dynamically by App.handleRoute() -->
+  </main>
+
+  <!-- Global Editorial Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <a href="#/" class="brand-logo">
+            <span class="logo-symbol">I</span>
+            <span class="logo-text">InkSpace</span>
+          </a>
+          <p class="footer-desc">
+            An artisanal digital publication dedicated to deep craft, engineering integrity, and contemplative essays.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#/" class="footer-link">Home</a></li>
+            <li><a href="#/explore" class="footer-link">Explore Archive</a></li>
+            <li><a href="#/categories" class="footer-link">Topics & Taxonomy</a></li>
+            <li><a href="#/saved" class="footer-link">Saved Articles</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Author Suite</h4>
+          <ul class="footer-links">
+            <li><a href="#/create" class="footer-link">Write a Story</a></li>
+            <li><a href="#/dashboard" class="footer-link">Author Dashboard</a></li>
+            <li><a href="#/about" class="footer-link">Editorial Guidelines</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Disciplines</h4>
+          <ul class="footer-links">
+            <li><a href="#/explore?category=Technology" class="footer-link">Technology</a></li>
+            <li><a href="#/explore?category=Programming" class="footer-link">Programming</a></li>
+            <li><a href="#/explore?category=Productivity" class="footer-link">Productivity</a></li>
+            <li><a href="#/explore?category=Design" class="footer-link">Design & UI</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 InkSpace Editorial. Built with pure HTML5, CSS3, and Vanilla JavaScript.</p>
+        <p>Zero dependencies &bull; Local-first persistence</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modular Scripts in Dependency Order -->
+  <script src="js/utils.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/blog.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/editor.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
