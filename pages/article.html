@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="refresh" content="0; url=../index.html#/explore" />
+  <title>InkSpace — Article</title>
+  <script>
+    // If URL has search query e.g. ?id=blog-001, forward to #/article/blog-001
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    if (id) {
+      window.location.replace(`../index.html#/article/${encodeURIComponent(id)}`);
+    } else {
+      window.location.replace('../index.html#/explore');
+    }
+  </script>
+</head>
+<body>
+  <p>Redirecting to InkSpace Article... <a href="../index.html#/explore">Click here if not redirected</a>.</p>
+</body>
+</html>

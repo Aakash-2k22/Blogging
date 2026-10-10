@@ -1,0 +1,278 @@
+/* ==========================================================================
+   InkSpace - Responsive Media Queries
+   Breakpoints: 1200px, 992px, 768px, 576px, 375px
+   ========================================================================== */
+
+/* --- 1200px and below --- */
+@media (max-width: 1200px) {
+  .footer-top-grid {
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+/* --- 992px and below (Tablet landscape & smaller) --- */
+@media (max-width: 992px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .btn-write-nav {
+    display: none;
+  }
+
+  /* Featured Article Card Stacks */
+  .featured-card {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-media {
+    min-height: 280px;
+  }
+
+  .featured-content {
+    padding: 2rem 1.75rem;
+  }
+
+  /* 3-column blog grid becomes 2-column */
+  .blog-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Editor layout collapses to single column */
+  .editor-layout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .editor-sidebar-card {
+    position: static;
+  }
+
+  /* About grid collapses to 2 columns */
+  .about-content-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* --- 768px and below (Tablet portrait & mobile) --- */
+@media (max-width: 768px) {
+  .site-header {
+    height: 64px;
+  }
+
+  .reading-progress-bar {
+    top: 64px;
+  }
+
+  .hero-section {
+    padding: 3.5rem 0 2.5rem;
+  }
+
+  .hero-headline {
+    font-size: 2.5rem;
+  }
+
+  .hero-subheadline {
+    font-size: 1.05rem;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  /* Blog grid collapses to 1 column */
+  .blog-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-controls-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sort-selector-wrapper {
+    justify-content: space-between;
+  }
+
+  .sort-select {
+    flex-grow: 1;
+  }
+
+  /* Article header meta bar */
+  .article-meta-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .article-header-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .article-main-title {
+    font-size: 2.15rem;
+  }
+
+  .article-lead-excerpt {
+    font-size: 1.1rem;
+  }
+
+  .rich-text-body {
+    font-size: 1.125rem;
+  }
+
+  .author-bio-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .newsletter-card {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .newsletter-input-group {
+    flex-direction: column;
+  }
+
+  .newsletter-submit-btn {
+    width: 100%;
+  }
+
+  .about-content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Dashboard Header & Metrics */
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .dashboard-header-cta {
+    width: 100%;
+  }
+
+  .dashboard-header-cta .btn {
+    width: 100%;
+  }
+
+  .dashboard-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Table on small devices */
+  .dashboard-table th.col-date,
+  .dashboard-table td.col-date,
+  .dashboard-table th.col-metrics,
+  .dashboard-table td.col-metrics {
+    display: none;
+  }
+}
+
+/* --- 576px and below (Mobile devices) --- */
+@media (max-width: 576px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.85rem;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .editor-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .editor-header-actions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .editor-header-actions .btn {
+    flex: 1;
+  }
+
+  .editor-toolbar {
+    gap: 0.2rem;
+  }
+
+  .toolbar-divider {
+    display: none;
+  }
+
+  .article-floating-actions {
+    padding: 0.75rem 1rem;
+  }
+
+  .action-group-left, .action-group-right {
+    gap: 0.4rem;
+  }
+
+  .dashboard-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  .toast {
+    min-width: unset;
+    width: calc(100vw - 2rem);
+  }
+
+  .toast-container {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+}
+
+/* --- 375px and below (Small phones) --- */
+@media (max-width: 375px) {
+  .hero-headline {
+    font-size: 2.15rem;
+  }
+
+  .brand-logo {
+    font-size: 1.4rem;
+  }
+
+  .btn-like-pill .like-label {
+    display: none;
+  }
+}
